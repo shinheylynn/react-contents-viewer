@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 
-const flexCenter = css`
+const flexCenter = (justifyContent = 'center', alignItems = 'center') => css`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: ${justifyContent};
+  align-items: ${alignItems};
 `;
 
 export default flexCenter;
