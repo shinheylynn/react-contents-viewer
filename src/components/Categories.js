@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import flexCenter from '../utils/mixin';
+import { flexCenter } from '../utils/mixin';
 
 const Footer = styled.footer`
   border: 1px solid blue;

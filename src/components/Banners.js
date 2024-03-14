@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import flexCenter from '../utils/mixin';
+import { flexCenter } from '../utils/mixin';
 
 const BannerContainer = styled.div`
   border: 1px solid red;
@@ -15,7 +15,6 @@ const BannerLink = styled.a`
 `;
 
 const BannerLinkProps = styled.div`
-  /* border: 1px solid green; */
   border-radius: 10px;
   box-shadow: 2px 3px 3px 0px lightgrey;
 `;
