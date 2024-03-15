@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -25,13 +26,13 @@ const RankingsTitleConatiner = styled.div`
   align-items: center;
   gap: 10px;
   width: 90%;
+  padding: 20px 0px 10px 0px;
 `;
 
 const RankingsTitle = styled.button`
   color: var(--white);
   font-size: 21px;
   font-weight: 500;
-  padding: 20px 0px;
 `;
 
 const Chevron = styled(FontAwesomeIcon)`
@@ -42,7 +43,7 @@ const Chevron = styled(FontAwesomeIcon)`
 const RankingList = styled.div`
   color: var(--white);
   width: 90%;
-  padding: 0px 0px 20px 0px;
+  padding: 0px 0px 10px 0px;
   overflow-y: scroll;
   ${invisibleScrollBar};
 `;
@@ -50,6 +51,10 @@ const RankingList = styled.div`
 const RankingProps = styled.div`
   display: flex;
   flex-direction: row;
+  padding: 10px 0px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const RankingImgContainer = styled.div`
