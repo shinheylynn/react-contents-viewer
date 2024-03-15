@@ -12,7 +12,7 @@ module.exports = {
   rules: {
     'max-depth': ['error', 2],
     // 'max-lines-per-function': ['error', 16],
-    'operator-linebreak': ['error', 'before'],
+    // 'operator-linebreak': ['error', 'before'],
     'no-unused-expressions': ['error', { allowTernary: true }],
     'import/no-extraneous-dependencies': 'off',
   },

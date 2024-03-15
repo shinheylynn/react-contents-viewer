@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { flexCenter, overflowEllipsis } from '../utils/mixin';
+import {
+  flexCenter,
+  overflowEllipsis,
+  invisibleScrollBar,
+} from '../utils/mixin';
+
+import rankingsData from '../data/rankingsData.json';
 
 const RankingsContainer = styled.div`
+  ${flexCenter('flex-start', 'center')};
   margin: 20px;
-  ${flexCenter()};
   flex-direction: column;
   background-color: #a8a8a8;
   width: 90%;
+  height: 480px;
   border-radius: 10px;
 `;
 
@@ -20,7 +27,7 @@ const RankingsTitleConatiner = styled.div`
   width: 90%;
 `;
 
-const RankingsTitle = styled.div`
+const RankingsTitle = styled.button`
   color: var(--white);
   font-size: 21px;
   font-weight: 500;
@@ -36,6 +43,8 @@ const RankingList = styled.div`
   color: var(--white);
   width: 90%;
   padding: 0px 0px 20px 0px;
+  overflow-y: scroll;
+  ${invisibleScrollBar};
 `;
 
 const RankingProps = styled.div`
@@ -85,7 +94,38 @@ const RankingArtist = styled.div`
   color: #747474;
 `;
 
-function Rankings() {
+const Rankings = () => {
+  const itemsPerPage = 7;
+  const [visibleItems, setVisibleItems] = useState(itemsPerPage);
+  const rankingListRef = useRef(null);
+
+  const loadMoreItems = () => {
+    setVisibleItems((prevVisibleItems) => prevVisibleItems + itemsPerPage);
+  };
+
+  const handleScroll = () => {
+    if (rankingListRef.current) {
+      const { scrollTop, clientHeight, scrollHeight } = rankingListRef.current;
+
+      if (scrollTop + clientHeight + 50 >= scrollHeight) {
+        loadMoreItems();
+      }
+    }
+  };
+
+  useEffect(() => {
+    const rankingsContainer = rankingListRef.current;
+    if (rankingsContainer) {
+      rankingsContainer.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (rankingsContainer) {
+        rankingsContainer.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
+
   return (
     <RankingsContainer>
       <RankingsTitleConatiner>
@@ -93,55 +133,23 @@ function Rankings() {
         <Chevron icon={faChevronRight}></Chevron>
       </RankingsTitleConatiner>
 
-      {/* todo: RankingList map 돌리기 */}
-      <RankingList>
-        <RankingProps>
-          <RankingImgContainer>
-            <RankingImg
-              src="./img/houseOfTricky.jpeg"
-              alt="앨범표지"
-            ></RankingImg>
-          </RankingImgContainer>
-          <RankingInfo>
-            <RankingNum>1</RankingNum>
-            <RankingTitle>HOUSE OF TRICKY: Trial And Error</RankingTitle>
-            <RankingChange>-</RankingChange>
-            <RankingArtist>싸이커스</RankingArtist>
-          </RankingInfo>
-        </RankingProps>
-
-        <RankingProps>
-          <RankingImgContainer>
-            <RankingImg
-              src="./img/houseOfTricky.jpeg"
-              alt="앨범표지"
-            ></RankingImg>
-          </RankingImgContainer>
-          <RankingInfo>
-            <RankingNum>1</RankingNum>
-            <RankingTitle>HOUSE OF TRICKY: Trial And Error</RankingTitle>
-            <RankingChange>-</RankingChange>
-            <RankingArtist>싸이커스</RankingArtist>
-          </RankingInfo>
-        </RankingProps>
-
-        <RankingProps>
-          <RankingImgContainer>
-            <RankingImg
-              src="./img/houseOfTricky.jpeg"
-              alt="앨범표지"
-            ></RankingImg>
-          </RankingImgContainer>
-          <RankingInfo>
-            <RankingNum>1</RankingNum>
-            <RankingTitle>HOUSE OF TRICKY: Trial And Error</RankingTitle>
-            <RankingChange>-</RankingChange>
-            <RankingArtist>싸이커스</RankingArtist>
-          </RankingInfo>
-        </RankingProps>
+      <RankingList ref={rankingListRef}>
+        {rankingsData.slice(0, visibleItems).map((item) => (
+          <RankingProps key={item.id}>
+            <RankingImgContainer>
+              <RankingImg src={item.imageSrc} alt="앨범표지"></RankingImg>
+            </RankingImgContainer>
+            <RankingInfo>
+              <RankingNum>{item.num}</RankingNum>
+              <RankingTitle>{item.title}</RankingTitle>
+              <RankingChange>{item.change}</RankingChange>
+              <RankingArtist>{item.artist}</RankingArtist>
+            </RankingInfo>
+          </RankingProps>
+        ))}
       </RankingList>
     </RankingsContainer>
   );
-}
+};
 
 export default Rankings;

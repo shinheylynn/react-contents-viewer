@@ -14,3 +14,12 @@ export const overflowEllipsis = css`
   overflow: hidden;
   text-overflow: ellipsis;
 `;
+
+export const invisibleScrollBar = css`
+  -ms-overflow-style: none; /*IE, Edge*/
+  scrollbar-width: none; /*Firefox*/
+  ::-webkit-scrollbar {
+    display: none; /*Chrome, Safari, Opera*/
+    width: 0px;
+  }
+`;
