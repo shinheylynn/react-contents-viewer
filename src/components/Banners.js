@@ -5,8 +5,8 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { flexCenter } from '../utils/mixin';
 
 const BannerContainer = styled.div`
-  border: 1px solid red;
-  padding: 25px 25px 0px 25px;
+  padding: 15px 20px 0px 20px;
+  background-color: white;
 `;
 
 const BannerLink = styled.a`
@@ -17,6 +17,7 @@ const BannerLink = styled.a`
 const BannerLinkProps = styled.div`
   border-radius: 10px;
   box-shadow: 2px 3px 3px 0px lightgrey;
+  background-color: white;
 `;
 
 const BannerImg = styled.img`

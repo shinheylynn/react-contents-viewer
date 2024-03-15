@@ -15,6 +15,7 @@ const Container = styled.div`
   width: 425px;
   min-height: 900px;
   border: 1px black solid;
+  background-color: #ebebeb;
 `;
 
 function App() {

@@ -5,9 +5,10 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { flexCenter, overflowEllipsis } from '../utils/mixin';
 
 const RankingsContainer = styled.div`
+  margin: 20px;
   ${flexCenter()};
   flex-direction: column;
-  background-color: #212121;
+  background-color: #a8a8a8;
   width: 90%;
   border-radius: 10px;
 `;

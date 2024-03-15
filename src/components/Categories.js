@@ -5,6 +5,7 @@ import { flexCenter } from '../utils/mixin';
 const Footer = styled.footer`
   border: 1px solid blue;
   width: 100%;
+  background-color: #ffb0b2;
 `;
 
 const CategoryContainer = styled.div`
