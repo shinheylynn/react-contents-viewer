@@ -9,6 +9,7 @@ import { flexCenter } from './utils/mixin';
 import Categories from './components/Categories.jsx';
 import Banners from './components/Banners.jsx';
 import Rankings from './components/Rankings.jsx';
+import Footer from './components/Footer.jsx';
 
 const Container = styled.div`
   ${flexCenter('flex-start', 'center')};
@@ -26,6 +27,7 @@ function App() {
       <Categories />
       <Banners />
       <Rankings />
+      <Footer />
     </Container>
   );
 }
