@@ -1,41 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { flexCenter } from '../utils/mixin';
+import { invisibleScrollBar } from '../utils/mixin';
 
-const Footer = styled.footer`
-  border: 1px solid blue;
+const CategoryContainer = styled.div`
+  ${invisibleScrollBar};
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 30px;
+  padding-left: 20px;
   width: 100%;
+  height: 5%;
   background-color: #ffb0b2;
 `;
 
-const CategoryContainer = styled.div`
-  ${flexCenter('space-around', 'center')};
-  padding: 10px 10px;
-`;
-
 const Category = styled.button`
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   border: none;
   background-color: transparent;
-
-  &:hover {
-    cursor: pointer;
-  }
+  color: ${(props) => (props.isSelected ? 'white' : 'black')};
+  cursor: ${(props) => (props.isSelected ? 'pointer' : '')};
 `;
 
 function Categories() {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
   return (
-    <Footer>
-      <CategoryContainer>
-        <Category>차트</Category>
-        <Category>Whook</Category>
-        <Category>이벤트</Category>
-        <Category>뉴스</Category>
-        <Category>스토어</Category>
-        <Category>충전소</Category>
-      </CategoryContainer>
-    </Footer>
+    <CategoryContainer>
+      {['차트', 'Whook', '이벤트', '뉴스', '스토어', '충전소'].map(
+        (category, index) => (
+          <Category
+            key={index}
+            isSelected={selectedCategory === category}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {category}
+          </Category>
+        ),
+      )}
+    </CategoryContainer>
   );
 }
 

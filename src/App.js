@@ -17,7 +17,6 @@ const Container = styled.div`
   font-family: Arial, sans-serif;
   width: 425px;
   height: 900px;
-  border: 1px black solid;
   background-color: #ebebeb;
 `;
 
