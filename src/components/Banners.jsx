@@ -1,12 +1,18 @@
 import React from 'react';
+import Slider from 'react-slick';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import { flexCenter } from '../utils/mixin';
+import bannersData from '../data/bannersData.json';
+import { flexCenter, overflowEllipsis } from '../utils/mixin';
 
 const BannerContainer = styled.div`
   padding: 15px 20px 0px 20px;
-  background-color: white;
+  background-color: lightgrey;
+  width: 100%;
+  height: 300px;
+`;
+
+const BannerLinkContainer = styled.div`
+  display: flex;
 `;
 
 const BannerLink = styled.a`
@@ -16,8 +22,8 @@ const BannerLink = styled.a`
 
 const BannerLinkProps = styled.div`
   border-radius: 10px;
-  box-shadow: 2px 3px 3px 0px lightgrey;
   background-color: white;
+  height: 250px;
 `;
 
 const BannerImg = styled.img`
@@ -25,49 +31,79 @@ const BannerImg = styled.img`
   object-fit: cover;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  height: 75%;
 `;
 
 const BannerTitle = styled.div`
-  padding: 5px 10px;
-  font-size: 18px;
+  padding-top: 13px;
+  ${overflowEllipsis};
+  width: 70%;
+  height: 13%;
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 10px;
 `;
 
 const BannerSubtitle = styled.div`
-  padding: 5px 10px;
-  font-size: 13px;
-  text-align: right;
+  ${flexCenter('flex-end', 'center')};
+  height: 12%;
+  font-size: 12px;
+  padding-right: 10px;
 `;
 
-const IndicatorContainer = styled.div`
-  ${flexCenter()};
-  padding: 15px 0px;
+const Arrow = styled.div`
+  display: block;
+  margin: 0px 5px;
 `;
 
-const Indicator = styled(FontAwesomeIcon)`
-  padding: 0px 5px;
-  font-size: 7px;
-  color: #e2e2e2;
-`;
+const Banners = () => {
+  const NextArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <Arrow className={className} style={{ ...style }} onClick={onClick} />
+    );
+  };
 
-function Banners() {
+  const PrevArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <Arrow className={className} style={{ ...style }} onClick={onClick} />
+    );
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+
   return (
     <BannerContainer>
-      <BannerLink href="#" target="_blank" rel="noopener noreferrer">
-        <BannerLinkProps>
-          <BannerImg src="./img/mCountDown.jpeg" alt="M Count Down Image" />
-          <BannerTitle>타이틀</BannerTitle>
-          <BannerSubtitle>날짜</BannerSubtitle>
-        </BannerLinkProps>
-      </BannerLink>
-      <IndicatorContainer>
-        <Indicator icon={faCircle}></Indicator>
-        <Indicator icon={faCircle}></Indicator>
-        <Indicator icon={faCircle}></Indicator>
-        <Indicator icon={faCircle}></Indicator>
-        <Indicator icon={faCircle}></Indicator>
-      </IndicatorContainer>
+      <Slider {...settings}>
+        {bannersData.map((item) => (
+          <BannerLinkContainer key={item.id}>
+            <BannerLink
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BannerLinkProps>
+                <BannerImg src={item.imageSrc} alt="M Count Down Image" />
+                <BannerTitle>{item.title}</BannerTitle>
+                <BannerSubtitle>{item.subtitle}</BannerSubtitle>
+              </BannerLinkProps>
+            </BannerLink>
+          </BannerLinkContainer>
+        ))}
+      </Slider>
     </BannerContainer>
   );
-}
+};
 
 export default Banners;

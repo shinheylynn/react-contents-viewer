@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import './utils/variables.css';
 import { flexCenter } from './utils/mixin';
 

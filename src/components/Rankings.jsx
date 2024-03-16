@@ -91,12 +91,12 @@ const RankingTitle = styled.div`
 
 const RankingChange = styled.div`
   ${flexCenter('center', 'flex-start')};
-  color: #747474;
+  color: var(--grey);
 `;
 
 const RankingArtist = styled.div`
   font-size: 15px;
-  color: #747474;
+  color: var(--grey);
 `;
 
 const Rankings = () => {
