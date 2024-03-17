@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
-import bannersData from '../data/bannersData.json';
 import { flexCenter, overflowEllipsis } from '../utils/mixin';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const BannerContainer = styled.div`
   padding: 15px 20px 0px 20px;
@@ -56,7 +57,7 @@ const Arrow = styled.div`
   margin: 0px 5px;
 `;
 
-const Banners = () => {
+const Banners = ({ data }) => {
   const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -82,6 +83,16 @@ const Banners = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
+  const [bannersData, setBannersData] = useState([]);
+
+  useEffect(() => {
+    if (data) {
+      setBannersData(data);
+    }
+  }, [data]);
+
+  console.log(bannersData);
 
   return (
     <BannerContainer>
