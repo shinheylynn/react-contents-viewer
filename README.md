@@ -16,8 +16,9 @@
 - [ ] 카테고리 별로 동일한 리스트 페이지가 구현된다. 🐞
 - [ ] 카테고리간 이동은 상단의 탭 메뉴 클릭으로 가능하다. 🐞
 
+(PR 참고)
 > 1. 컴포넌트의 재사용을 위해 `Categories.jsx` 내에서 `Banners.jsx` 와 `Rankings.jsx` 에게 `props` 로 `categoriesData.json` 의 `id` 값을 전달.
->
+> 
 > ```
 > // Categories.jsx
 > <Banners data={selectedCategoryData ? selectedCategoryData.id : null} />
