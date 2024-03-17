@@ -1,0 +1,26 @@
+[
+  {
+    "id": "category1",
+    "name": "차트"
+  },
+  {
+    "id": "category2",
+    "name": "Whook"
+  },
+  {
+    "id": "category3",
+    "name": "이벤트"
+  },
+  {
+    "id": "category4",
+    "name": "뉴스"
+  },
+  {
+    "id": "category5",
+    "name": "스토어"
+  },
+  {
+    "id": "category6",
+    "name": "충전소"
+  }
+]

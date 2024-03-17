@@ -17,8 +17,9 @@
 - [ ] 카테고리간 이동은 상단의 탭 메뉴 클릭으로 가능하다. 🐞
 
 (PR 참고)
+
 > 1. 컴포넌트의 재사용을 위해 `Categories.jsx` 내에서 `Banners.jsx` 와 `Rankings.jsx` 에게 `props` 로 `categoriesData.json` 의 `id` 값을 전달.
-> 
+>
 > ```
 > // Categories.jsx
 > <Banners data={selectedCategoryData ? selectedCategoryData.id : null} />
@@ -52,10 +53,3 @@
 
 - [x] 순위형 콘텐츠는 무한 스크롤이 가능한 형태이다.
 - [x] 순위형 콘텐츠 아이템들은 스크롤을 실행한 경우에만 추가로 로딩된다.
-
-<br/>
-<br/>
-
-# 방향성
-
-컴포넌트의 재사용성 및 확장성을 용이하게 하기 위해 구조를 수정하고자
