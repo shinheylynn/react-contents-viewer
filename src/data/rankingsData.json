@@ -1,146 +1,883 @@
-[
-  {
-    "id": 1,
-    "imageSrc": "./img/rankings/not_ok_locco.jpeg",
-    "num": "1",
-    "title": "NOT OK(feat. MINNIE)",
-    "change": "-",
-    "artist": "로꼬"
-  },
-  {
-    "id": 2,
-    "imageSrc": "./img/rankings/trust_paul_blanco.jpeg",
-    "num": "2",
-    "title": "믿어 (feat. Crush)",
-    "change": "-",
-    "artist": "Paul Blanco"
-  },
-  {
-    "id": 3,
-    "imageSrc": "./img/rankings/black_heart_toil.jpeg",
-    "num": "3",
-    "title": "검정색하트 (feat. Leellamarz, BE'O)",
-    "change": "-",
-    "artist": "TOIL"
-  },
-  {
-    "id": 4,
-    "imageSrc": "./img/rankings/blue_frog.jpeg",
-    "num": "4",
-    "title": "기억해줘요 내 모든 날과 그때를",
-    "change": "-",
-    "artist": "화곡동 청개구리"
-  },
-  {
-    "id": 5,
-    "imageSrc": "./img/rankings/memory_maktub.jpeg",
-    "num": "5",
-    "title": "Memory (feat. Leeraon)",
-    "change": "-",
-    "artist": "마크툽(MAKTUB)"
-  },
-  {
-    "id": 6,
-    "imageSrc": "./img/rankings/nowadays_ydi.jpeg",
-    "num": "6",
-    "title": "요즘",
-    "change": "-",
-    "artist": "양다일"
-  },
-  {
-    "id": 7,
-    "imageSrc": "./img/rankings/ode_to_the_star_maktub.jpeg",
-    "num": "7",
-    "title": "별을 담은 시",
-    "change": "-",
-    "artist": "마크툽(MAKTUB)"
-  },
-  {
-    "id": 8,
-    "imageSrc": "./img/rankings/action_dpr_live.jpeg",
-    "num": "8",
-    "title": "Action! (feat. GRAY)",
-    "change": "-",
-    "artist": "DPR LIVE"
-  },
-  {
-    "id": 9,
-    "imageSrc": "./img/rankings/gamble_bibi.jpeg",
-    "num": "9",
-    "title": "사장님 도박은 재미로 하셔야 합니다",
-    "change": "-",
-    "artist": "비비(BIBI)"
-  },
-  {
-    "id": 10,
-    "imageSrc": "./img/rankings/still_colde.jpeg",
-    "num": "10",
-    "title": "난 아직도",
-    "change": "-",
-    "artist": "콜드"
-  },
-  {
-    "id": 11,
-    "imageSrc": "./img/rankings/ohayo_dhack.jpeg",
-    "num": "11",
-    "title": "OHAYO MY NIGHT",
-    "change": "-",
-    "artist": "디핵 (D-Hack) 및 PATEKO (파테코)"
-  },
-  {
-    "id": 12,
-    "imageSrc": "./img/rankings/monday_blues_crush.jpeg",
-    "num": "12",
-    "title": "Monday Blues",
-    "change": "-",
-    "artist": "크러쉬"
-  },
-  {
-    "id": 13,
-    "imageSrc": "./img/rankings/yes_or_no_groovy.jpeg",
-    "num": "13",
-    "title": "Yes or No (feat. 허윤진 of LE SSERAFIM, Crush)",
-    "change": "-",
-    "artist": "그루비룸 (GroovyRoom)"
-  },
-  {
-    "id": 14,
-    "imageSrc": "./img/rankings/shopper_iu.jpeg",
-    "num": "14",
-    "title": "Shopper",
-    "change": "-",
-    "artist": "아이유"
-  },
-  {
-    "id": 15,
-    "imageSrc": "./img/rankings/sugar_rush_bibi.jpeg",
-    "num": "15",
-    "title": "Sugar Rush",
-    "change": "-",
-    "artist": "비비 (BIBI)"
-  },
-  {
-    "id": 16,
-    "imageSrc": "./img/rankings/been_like_this_doja_cat.jpeg",
-    "num": "16",
-    "title": "Been Like This",
-    "change": "-",
-    "artist": "Doja Cat"
-  },
-  {
-    "id": 17,
-    "imageSrc": "./img/rankings/labyrinth_taylor_swift.jpeg",
-    "num": "17",
-    "title": "Labyrinth",
-    "change": "-",
-    "artist": "Taylor Swift"
-  },
-  {
-    "id": 18,
-    "imageSrc": "./img/rankings/run_back_to_you_lay_lauv.jpeg",
-    "num": "18",
-    "title": "Run Back To You",
-    "change": "-",
-    "artist": "LAY 및 Lauv"
-  }
-]
+{
+  "category1": [
+    {
+      "id": 1,
+      "imageSrc": "./img/rankings/not_ok_locco.jpeg",
+      "num": "1",
+      "title": "NOT OK(feat. MINNIE)",
+      "change": "-",
+      "artist": "로꼬"
+    },
+    {
+      "id": 2,
+      "imageSrc": "./img/rankings/trust_paul_blanco.jpeg",
+      "num": "2",
+      "title": "믿어 (feat. Crush)",
+      "change": "-",
+      "artist": "Paul Blanco"
+    },
+    {
+      "id": 3,
+      "imageSrc": "./img/rankings/black_heart_toil.jpeg",
+      "num": "3",
+      "title": "검정색하트 (feat. Leellamarz, BE'O)",
+      "change": "-",
+      "artist": "TOIL"
+    },
+    {
+      "id": 4,
+      "imageSrc": "./img/rankings/blue_frog.jpeg",
+      "num": "4",
+      "title": "기억해줘요 내 모든 날과 그때를",
+      "change": "-",
+      "artist": "화곡동 청개구리"
+    },
+    {
+      "id": 5,
+      "imageSrc": "./img/rankings/memory_maktub.jpeg",
+      "num": "5",
+      "title": "Memory (feat. Leeraon)",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 6,
+      "imageSrc": "./img/rankings/nowadays_ydi.jpeg",
+      "num": "6",
+      "title": "요즘",
+      "change": "-",
+      "artist": "양다일"
+    },
+    {
+      "id": 7,
+      "imageSrc": "./img/rankings/ode_to_the_star_maktub.jpeg",
+      "num": "7",
+      "title": "별을 담은 시",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 8,
+      "imageSrc": "./img/rankings/action_dpr_live.jpeg",
+      "num": "8",
+      "title": "Action! (feat. GRAY)",
+      "change": "-",
+      "artist": "DPR LIVE"
+    },
+    {
+      "id": 9,
+      "imageSrc": "./img/rankings/gamble_bibi.jpeg",
+      "num": "9",
+      "title": "사장님 도박은 재미로 하셔야 합니다",
+      "change": "-",
+      "artist": "비비(BIBI)"
+    },
+    {
+      "id": 10,
+      "imageSrc": "./img/rankings/still_colde.jpeg",
+      "num": "10",
+      "title": "난 아직도",
+      "change": "-",
+      "artist": "콜드"
+    },
+    {
+      "id": 11,
+      "imageSrc": "./img/rankings/ohayo_dhack.jpeg",
+      "num": "11",
+      "title": "OHAYO MY NIGHT",
+      "change": "-",
+      "artist": "디핵 (D-Hack) 및 PATEKO (파테코)"
+    },
+    {
+      "id": 12,
+      "imageSrc": "./img/rankings/monday_blues_crush.jpeg",
+      "num": "12",
+      "title": "Monday Blues",
+      "change": "-",
+      "artist": "크러쉬"
+    },
+    {
+      "id": 13,
+      "imageSrc": "./img/rankings/yes_or_no_groovy.jpeg",
+      "num": "13",
+      "title": "Yes or No (feat. 허윤진 of LE SSERAFIM, Crush)",
+      "change": "-",
+      "artist": "그루비룸 (GroovyRoom)"
+    },
+    {
+      "id": 14,
+      "imageSrc": "./img/rankings/shopper_iu.jpeg",
+      "num": "14",
+      "title": "Shopper",
+      "change": "-",
+      "artist": "아이유"
+    },
+    {
+      "id": 15,
+      "imageSrc": "./img/rankings/sugar_rush_bibi.jpeg",
+      "num": "15",
+      "title": "Sugar Rush",
+      "change": "-",
+      "artist": "비비 (BIBI)"
+    },
+    {
+      "id": 16,
+      "imageSrc": "./img/rankings/been_like_this_doja_cat.jpeg",
+      "num": "16",
+      "title": "Been Like This",
+      "change": "-",
+      "artist": "Doja Cat"
+    },
+    {
+      "id": 17,
+      "imageSrc": "./img/rankings/labyrinth_taylor_swift.jpeg",
+      "num": "17",
+      "title": "Labyrinth",
+      "change": "-",
+      "artist": "Taylor Swift"
+    },
+    {
+      "id": 18,
+      "imageSrc": "./img/rankings/run_back_to_you_lay_lauv.jpeg",
+      "num": "18",
+      "title": "Run Back To You",
+      "change": "-",
+      "artist": "LAY 및 Lauv"
+    }
+  ],
+
+  "category2": [
+    {
+      "id": 1,
+      "imageSrc": "./img/rankings/not_ok_locco.jpeg",
+      "num": "1",
+      "title": "NOT OK(feat. MINNIE)",
+      "change": "-",
+      "artist": "로꼬"
+    },
+    {
+      "id": 2,
+      "imageSrc": "./img/rankings/trust_paul_blanco.jpeg",
+      "num": "2",
+      "title": "믿어 (feat. Crush)",
+      "change": "-",
+      "artist": "Paul Blanco"
+    },
+    {
+      "id": 3,
+      "imageSrc": "./img/rankings/black_heart_toil.jpeg",
+      "num": "3",
+      "title": "검정색하트 (feat. Leellamarz, BE'O)",
+      "change": "-",
+      "artist": "TOIL"
+    },
+    {
+      "id": 4,
+      "imageSrc": "./img/rankings/blue_frog.jpeg",
+      "num": "4",
+      "title": "기억해줘요 내 모든 날과 그때를",
+      "change": "-",
+      "artist": "화곡동 청개구리"
+    },
+    {
+      "id": 5,
+      "imageSrc": "./img/rankings/memory_maktub.jpeg",
+      "num": "5",
+      "title": "Memory (feat. Leeraon)",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 6,
+      "imageSrc": "./img/rankings/nowadays_ydi.jpeg",
+      "num": "6",
+      "title": "요즘",
+      "change": "-",
+      "artist": "양다일"
+    },
+    {
+      "id": 7,
+      "imageSrc": "./img/rankings/ode_to_the_star_maktub.jpeg",
+      "num": "7",
+      "title": "별을 담은 시",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 8,
+      "imageSrc": "./img/rankings/action_dpr_live.jpeg",
+      "num": "8",
+      "title": "Action! (feat. GRAY)",
+      "change": "-",
+      "artist": "DPR LIVE"
+    },
+    {
+      "id": 9,
+      "imageSrc": "./img/rankings/gamble_bibi.jpeg",
+      "num": "9",
+      "title": "사장님 도박은 재미로 하셔야 합니다",
+      "change": "-",
+      "artist": "비비(BIBI)"
+    },
+    {
+      "id": 10,
+      "imageSrc": "./img/rankings/still_colde.jpeg",
+      "num": "10",
+      "title": "난 아직도",
+      "change": "-",
+      "artist": "콜드"
+    },
+    {
+      "id": 11,
+      "imageSrc": "./img/rankings/ohayo_dhack.jpeg",
+      "num": "11",
+      "title": "OHAYO MY NIGHT",
+      "change": "-",
+      "artist": "디핵 (D-Hack) 및 PATEKO (파테코)"
+    },
+    {
+      "id": 12,
+      "imageSrc": "./img/rankings/monday_blues_crush.jpeg",
+      "num": "12",
+      "title": "Monday Blues",
+      "change": "-",
+      "artist": "크러쉬"
+    },
+    {
+      "id": 13,
+      "imageSrc": "./img/rankings/yes_or_no_groovy.jpeg",
+      "num": "13",
+      "title": "Yes or No (feat. 허윤진 of LE SSERAFIM, Crush)",
+      "change": "-",
+      "artist": "그루비룸 (GroovyRoom)"
+    },
+    {
+      "id": 14,
+      "imageSrc": "./img/rankings/shopper_iu.jpeg",
+      "num": "14",
+      "title": "Shopper",
+      "change": "-",
+      "artist": "아이유"
+    },
+    {
+      "id": 15,
+      "imageSrc": "./img/rankings/sugar_rush_bibi.jpeg",
+      "num": "15",
+      "title": "Sugar Rush",
+      "change": "-",
+      "artist": "비비 (BIBI)"
+    },
+    {
+      "id": 16,
+      "imageSrc": "./img/rankings/been_like_this_doja_cat.jpeg",
+      "num": "16",
+      "title": "Been Like This",
+      "change": "-",
+      "artist": "Doja Cat"
+    },
+    {
+      "id": 17,
+      "imageSrc": "./img/rankings/labyrinth_taylor_swift.jpeg",
+      "num": "17",
+      "title": "Labyrinth",
+      "change": "-",
+      "artist": "Taylor Swift"
+    },
+    {
+      "id": 18,
+      "imageSrc": "./img/rankings/run_back_to_you_lay_lauv.jpeg",
+      "num": "18",
+      "title": "Run Back To You",
+      "change": "-",
+      "artist": "LAY 및 Lauv"
+    }
+  ],
+
+  "category3": [
+    {
+      "id": 1,
+      "imageSrc": "./img/rankings/not_ok_locco.jpeg",
+      "num": "1",
+      "title": "NOT OK(feat. MINNIE)",
+      "change": "-",
+      "artist": "로꼬"
+    },
+    {
+      "id": 2,
+      "imageSrc": "./img/rankings/trust_paul_blanco.jpeg",
+      "num": "2",
+      "title": "믿어 (feat. Crush)",
+      "change": "-",
+      "artist": "Paul Blanco"
+    },
+    {
+      "id": 3,
+      "imageSrc": "./img/rankings/black_heart_toil.jpeg",
+      "num": "3",
+      "title": "검정색하트 (feat. Leellamarz, BE'O)",
+      "change": "-",
+      "artist": "TOIL"
+    },
+    {
+      "id": 4,
+      "imageSrc": "./img/rankings/blue_frog.jpeg",
+      "num": "4",
+      "title": "기억해줘요 내 모든 날과 그때를",
+      "change": "-",
+      "artist": "화곡동 청개구리"
+    },
+    {
+      "id": 5,
+      "imageSrc": "./img/rankings/memory_maktub.jpeg",
+      "num": "5",
+      "title": "Memory (feat. Leeraon)",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 6,
+      "imageSrc": "./img/rankings/nowadays_ydi.jpeg",
+      "num": "6",
+      "title": "요즘",
+      "change": "-",
+      "artist": "양다일"
+    },
+    {
+      "id": 7,
+      "imageSrc": "./img/rankings/ode_to_the_star_maktub.jpeg",
+      "num": "7",
+      "title": "별을 담은 시",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 8,
+      "imageSrc": "./img/rankings/action_dpr_live.jpeg",
+      "num": "8",
+      "title": "Action! (feat. GRAY)",
+      "change": "-",
+      "artist": "DPR LIVE"
+    },
+    {
+      "id": 9,
+      "imageSrc": "./img/rankings/gamble_bibi.jpeg",
+      "num": "9",
+      "title": "사장님 도박은 재미로 하셔야 합니다",
+      "change": "-",
+      "artist": "비비(BIBI)"
+    },
+    {
+      "id": 10,
+      "imageSrc": "./img/rankings/still_colde.jpeg",
+      "num": "10",
+      "title": "난 아직도",
+      "change": "-",
+      "artist": "콜드"
+    },
+    {
+      "id": 11,
+      "imageSrc": "./img/rankings/ohayo_dhack.jpeg",
+      "num": "11",
+      "title": "OHAYO MY NIGHT",
+      "change": "-",
+      "artist": "디핵 (D-Hack) 및 PATEKO (파테코)"
+    },
+    {
+      "id": 12,
+      "imageSrc": "./img/rankings/monday_blues_crush.jpeg",
+      "num": "12",
+      "title": "Monday Blues",
+      "change": "-",
+      "artist": "크러쉬"
+    },
+    {
+      "id": 13,
+      "imageSrc": "./img/rankings/yes_or_no_groovy.jpeg",
+      "num": "13",
+      "title": "Yes or No (feat. 허윤진 of LE SSERAFIM, Crush)",
+      "change": "-",
+      "artist": "그루비룸 (GroovyRoom)"
+    },
+    {
+      "id": 14,
+      "imageSrc": "./img/rankings/shopper_iu.jpeg",
+      "num": "14",
+      "title": "Shopper",
+      "change": "-",
+      "artist": "아이유"
+    },
+    {
+      "id": 15,
+      "imageSrc": "./img/rankings/sugar_rush_bibi.jpeg",
+      "num": "15",
+      "title": "Sugar Rush",
+      "change": "-",
+      "artist": "비비 (BIBI)"
+    },
+    {
+      "id": 16,
+      "imageSrc": "./img/rankings/been_like_this_doja_cat.jpeg",
+      "num": "16",
+      "title": "Been Like This",
+      "change": "-",
+      "artist": "Doja Cat"
+    },
+    {
+      "id": 17,
+      "imageSrc": "./img/rankings/labyrinth_taylor_swift.jpeg",
+      "num": "17",
+      "title": "Labyrinth",
+      "change": "-",
+      "artist": "Taylor Swift"
+    },
+    {
+      "id": 18,
+      "imageSrc": "./img/rankings/run_back_to_you_lay_lauv.jpeg",
+      "num": "18",
+      "title": "Run Back To You",
+      "change": "-",
+      "artist": "LAY 및 Lauv"
+    }
+  ],
+
+  "category4": [
+    {
+      "id": 1,
+      "imageSrc": "./img/rankings/not_ok_locco.jpeg",
+      "num": "1",
+      "title": "NOT OK(feat. MINNIE)",
+      "change": "-",
+      "artist": "로꼬"
+    },
+    {
+      "id": 2,
+      "imageSrc": "./img/rankings/trust_paul_blanco.jpeg",
+      "num": "2",
+      "title": "믿어 (feat. Crush)",
+      "change": "-",
+      "artist": "Paul Blanco"
+    },
+    {
+      "id": 3,
+      "imageSrc": "./img/rankings/black_heart_toil.jpeg",
+      "num": "3",
+      "title": "검정색하트 (feat. Leellamarz, BE'O)",
+      "change": "-",
+      "artist": "TOIL"
+    },
+    {
+      "id": 4,
+      "imageSrc": "./img/rankings/blue_frog.jpeg",
+      "num": "4",
+      "title": "기억해줘요 내 모든 날과 그때를",
+      "change": "-",
+      "artist": "화곡동 청개구리"
+    },
+    {
+      "id": 5,
+      "imageSrc": "./img/rankings/memory_maktub.jpeg",
+      "num": "5",
+      "title": "Memory (feat. Leeraon)",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 6,
+      "imageSrc": "./img/rankings/nowadays_ydi.jpeg",
+      "num": "6",
+      "title": "요즘",
+      "change": "-",
+      "artist": "양다일"
+    },
+    {
+      "id": 7,
+      "imageSrc": "./img/rankings/ode_to_the_star_maktub.jpeg",
+      "num": "7",
+      "title": "별을 담은 시",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 8,
+      "imageSrc": "./img/rankings/action_dpr_live.jpeg",
+      "num": "8",
+      "title": "Action! (feat. GRAY)",
+      "change": "-",
+      "artist": "DPR LIVE"
+    },
+    {
+      "id": 9,
+      "imageSrc": "./img/rankings/gamble_bibi.jpeg",
+      "num": "9",
+      "title": "사장님 도박은 재미로 하셔야 합니다",
+      "change": "-",
+      "artist": "비비(BIBI)"
+    },
+    {
+      "id": 10,
+      "imageSrc": "./img/rankings/still_colde.jpeg",
+      "num": "10",
+      "title": "난 아직도",
+      "change": "-",
+      "artist": "콜드"
+    },
+    {
+      "id": 11,
+      "imageSrc": "./img/rankings/ohayo_dhack.jpeg",
+      "num": "11",
+      "title": "OHAYO MY NIGHT",
+      "change": "-",
+      "artist": "디핵 (D-Hack) 및 PATEKO (파테코)"
+    },
+    {
+      "id": 12,
+      "imageSrc": "./img/rankings/monday_blues_crush.jpeg",
+      "num": "12",
+      "title": "Monday Blues",
+      "change": "-",
+      "artist": "크러쉬"
+    },
+    {
+      "id": 13,
+      "imageSrc": "./img/rankings/yes_or_no_groovy.jpeg",
+      "num": "13",
+      "title": "Yes or No (feat. 허윤진 of LE SSERAFIM, Crush)",
+      "change": "-",
+      "artist": "그루비룸 (GroovyRoom)"
+    },
+    {
+      "id": 14,
+      "imageSrc": "./img/rankings/shopper_iu.jpeg",
+      "num": "14",
+      "title": "Shopper",
+      "change": "-",
+      "artist": "아이유"
+    },
+    {
+      "id": 15,
+      "imageSrc": "./img/rankings/sugar_rush_bibi.jpeg",
+      "num": "15",
+      "title": "Sugar Rush",
+      "change": "-",
+      "artist": "비비 (BIBI)"
+    },
+    {
+      "id": 16,
+      "imageSrc": "./img/rankings/been_like_this_doja_cat.jpeg",
+      "num": "16",
+      "title": "Been Like This",
+      "change": "-",
+      "artist": "Doja Cat"
+    },
+    {
+      "id": 17,
+      "imageSrc": "./img/rankings/labyrinth_taylor_swift.jpeg",
+      "num": "17",
+      "title": "Labyrinth",
+      "change": "-",
+      "artist": "Taylor Swift"
+    },
+    {
+      "id": 18,
+      "imageSrc": "./img/rankings/run_back_to_you_lay_lauv.jpeg",
+      "num": "18",
+      "title": "Run Back To You",
+      "change": "-",
+      "artist": "LAY 및 Lauv"
+    }
+  ],
+
+  "category5": [
+    {
+      "id": 1,
+      "imageSrc": "./img/rankings/not_ok_locco.jpeg",
+      "num": "1",
+      "title": "NOT OK(feat. MINNIE)",
+      "change": "-",
+      "artist": "로꼬"
+    },
+    {
+      "id": 2,
+      "imageSrc": "./img/rankings/trust_paul_blanco.jpeg",
+      "num": "2",
+      "title": "믿어 (feat. Crush)",
+      "change": "-",
+      "artist": "Paul Blanco"
+    },
+    {
+      "id": 3,
+      "imageSrc": "./img/rankings/black_heart_toil.jpeg",
+      "num": "3",
+      "title": "검정색하트 (feat. Leellamarz, BE'O)",
+      "change": "-",
+      "artist": "TOIL"
+    },
+    {
+      "id": 4,
+      "imageSrc": "./img/rankings/blue_frog.jpeg",
+      "num": "4",
+      "title": "기억해줘요 내 모든 날과 그때를",
+      "change": "-",
+      "artist": "화곡동 청개구리"
+    },
+    {
+      "id": 5,
+      "imageSrc": "./img/rankings/memory_maktub.jpeg",
+      "num": "5",
+      "title": "Memory (feat. Leeraon)",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 6,
+      "imageSrc": "./img/rankings/nowadays_ydi.jpeg",
+      "num": "6",
+      "title": "요즘",
+      "change": "-",
+      "artist": "양다일"
+    },
+    {
+      "id": 7,
+      "imageSrc": "./img/rankings/ode_to_the_star_maktub.jpeg",
+      "num": "7",
+      "title": "별을 담은 시",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 8,
+      "imageSrc": "./img/rankings/action_dpr_live.jpeg",
+      "num": "8",
+      "title": "Action! (feat. GRAY)",
+      "change": "-",
+      "artist": "DPR LIVE"
+    },
+    {
+      "id": 9,
+      "imageSrc": "./img/rankings/gamble_bibi.jpeg",
+      "num": "9",
+      "title": "사장님 도박은 재미로 하셔야 합니다",
+      "change": "-",
+      "artist": "비비(BIBI)"
+    },
+    {
+      "id": 10,
+      "imageSrc": "./img/rankings/still_colde.jpeg",
+      "num": "10",
+      "title": "난 아직도",
+      "change": "-",
+      "artist": "콜드"
+    },
+    {
+      "id": 11,
+      "imageSrc": "./img/rankings/ohayo_dhack.jpeg",
+      "num": "11",
+      "title": "OHAYO MY NIGHT",
+      "change": "-",
+      "artist": "디핵 (D-Hack) 및 PATEKO (파테코)"
+    },
+    {
+      "id": 12,
+      "imageSrc": "./img/rankings/monday_blues_crush.jpeg",
+      "num": "12",
+      "title": "Monday Blues",
+      "change": "-",
+      "artist": "크러쉬"
+    },
+    {
+      "id": 13,
+      "imageSrc": "./img/rankings/yes_or_no_groovy.jpeg",
+      "num": "13",
+      "title": "Yes or No (feat. 허윤진 of LE SSERAFIM, Crush)",
+      "change": "-",
+      "artist": "그루비룸 (GroovyRoom)"
+    },
+    {
+      "id": 14,
+      "imageSrc": "./img/rankings/shopper_iu.jpeg",
+      "num": "14",
+      "title": "Shopper",
+      "change": "-",
+      "artist": "아이유"
+    },
+    {
+      "id": 15,
+      "imageSrc": "./img/rankings/sugar_rush_bibi.jpeg",
+      "num": "15",
+      "title": "Sugar Rush",
+      "change": "-",
+      "artist": "비비 (BIBI)"
+    },
+    {
+      "id": 16,
+      "imageSrc": "./img/rankings/been_like_this_doja_cat.jpeg",
+      "num": "16",
+      "title": "Been Like This",
+      "change": "-",
+      "artist": "Doja Cat"
+    },
+    {
+      "id": 17,
+      "imageSrc": "./img/rankings/labyrinth_taylor_swift.jpeg",
+      "num": "17",
+      "title": "Labyrinth",
+      "change": "-",
+      "artist": "Taylor Swift"
+    },
+    {
+      "id": 18,
+      "imageSrc": "./img/rankings/run_back_to_you_lay_lauv.jpeg",
+      "num": "18",
+      "title": "Run Back To You",
+      "change": "-",
+      "artist": "LAY 및 Lauv"
+    }
+  ],
+
+  "category6": [
+    {
+      "id": 1,
+      "imageSrc": "./img/rankings/not_ok_locco.jpeg",
+      "num": "1",
+      "title": "NOT OK(feat. MINNIE)",
+      "change": "-",
+      "artist": "로꼬"
+    },
+    {
+      "id": 2,
+      "imageSrc": "./img/rankings/trust_paul_blanco.jpeg",
+      "num": "2",
+      "title": "믿어 (feat. Crush)",
+      "change": "-",
+      "artist": "Paul Blanco"
+    },
+    {
+      "id": 3,
+      "imageSrc": "./img/rankings/black_heart_toil.jpeg",
+      "num": "3",
+      "title": "검정색하트 (feat. Leellamarz, BE'O)",
+      "change": "-",
+      "artist": "TOIL"
+    },
+    {
+      "id": 4,
+      "imageSrc": "./img/rankings/blue_frog.jpeg",
+      "num": "4",
+      "title": "기억해줘요 내 모든 날과 그때를",
+      "change": "-",
+      "artist": "화곡동 청개구리"
+    },
+    {
+      "id": 5,
+      "imageSrc": "./img/rankings/memory_maktub.jpeg",
+      "num": "5",
+      "title": "Memory (feat. Leeraon)",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 6,
+      "imageSrc": "./img/rankings/nowadays_ydi.jpeg",
+      "num": "6",
+      "title": "요즘",
+      "change": "-",
+      "artist": "양다일"
+    },
+    {
+      "id": 7,
+      "imageSrc": "./img/rankings/ode_to_the_star_maktub.jpeg",
+      "num": "7",
+      "title": "별을 담은 시",
+      "change": "-",
+      "artist": "마크툽(MAKTUB)"
+    },
+    {
+      "id": 8,
+      "imageSrc": "./img/rankings/action_dpr_live.jpeg",
+      "num": "8",
+      "title": "Action! (feat. GRAY)",
+      "change": "-",
+      "artist": "DPR LIVE"
+    },
+    {
+      "id": 9,
+      "imageSrc": "./img/rankings/gamble_bibi.jpeg",
+      "num": "9",
+      "title": "사장님 도박은 재미로 하셔야 합니다",
+      "change": "-",
+      "artist": "비비(BIBI)"
+    },
+    {
+      "id": 10,
+      "imageSrc": "./img/rankings/still_colde.jpeg",
+      "num": "10",
+      "title": "난 아직도",
+      "change": "-",
+      "artist": "콜드"
+    },
+    {
+      "id": 11,
+      "imageSrc": "./img/rankings/ohayo_dhack.jpeg",
+      "num": "11",
+      "title": "OHAYO MY NIGHT",
+      "change": "-",
+      "artist": "디핵 (D-Hack) 및 PATEKO (파테코)"
+    },
+    {
+      "id": 12,
+      "imageSrc": "./img/rankings/monday_blues_crush.jpeg",
+      "num": "12",
+      "title": "Monday Blues",
+      "change": "-",
+      "artist": "크러쉬"
+    },
+    {
+      "id": 13,
+      "imageSrc": "./img/rankings/yes_or_no_groovy.jpeg",
+      "num": "13",
+      "title": "Yes or No (feat. 허윤진 of LE SSERAFIM, Crush)",
+      "change": "-",
+      "artist": "그루비룸 (GroovyRoom)"
+    },
+    {
+      "id": 14,
+      "imageSrc": "./img/rankings/shopper_iu.jpeg",
+      "num": "14",
+      "title": "Shopper",
+      "change": "-",
+      "artist": "아이유"
+    },
+    {
+      "id": 15,
+      "imageSrc": "./img/rankings/sugar_rush_bibi.jpeg",
+      "num": "15",
+      "title": "Sugar Rush",
+      "change": "-",
+      "artist": "비비 (BIBI)"
+    },
+    {
+      "id": 16,
+      "imageSrc": "./img/rankings/been_like_this_doja_cat.jpeg",
+      "num": "16",
+      "title": "Been Like This",
+      "change": "-",
+      "artist": "Doja Cat"
+    },
+    {
+      "id": 17,
+      "imageSrc": "./img/rankings/labyrinth_taylor_swift.jpeg",
+      "num": "17",
+      "title": "Labyrinth",
+      "change": "-",
+      "artist": "Taylor Swift"
+    },
+    {
+      "id": 18,
+      "imageSrc": "./img/rankings/run_back_to_you_lay_lauv.jpeg",
+      "num": "18",
+      "title": "Run Back To You",
+      "change": "-",
+      "artist": "LAY 및 Lauv"
+    }
+  ]
+}

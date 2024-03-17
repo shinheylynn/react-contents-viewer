@@ -99,7 +99,7 @@ const RankingArtist = styled.div`
   color: var(--grey);
 `;
 
-const Rankings = () => {
+const Rankings = ({ data: categoryId }) => {
   const itemsPerPage = 7;
   const [visibleItems, setVisibleItems] = useState(itemsPerPage);
   const rankingListRef = useRef(null);
@@ -131,6 +131,16 @@ const Rankings = () => {
     };
   }, []);
 
+  const [selectedCategoryId, setSelectedCategoryId] = useState('');
+
+  useEffect(() => {
+    if (categoryId) setSelectedCategoryId(categoryId);
+  }, [categoryId]);
+
+  console.log(categoryId);
+  console.log(selectedCategoryId);
+  console.log(rankingsData[selectedCategoryId]);
+
   return (
     <RankingsContainer>
       <RankingsTitleConatiner>
@@ -139,19 +149,23 @@ const Rankings = () => {
       </RankingsTitleConatiner>
 
       <RankingList ref={rankingListRef}>
-        {rankingsData.slice(0, visibleItems).map((item) => (
-          <RankingProps key={item.id}>
-            <RankingImgContainer>
-              <RankingImg src={item.imageSrc} alt="앨범표지"></RankingImg>
-            </RankingImgContainer>
-            <RankingInfo>
-              <RankingNum>{item.num}</RankingNum>
-              <RankingTitle>{item.title}</RankingTitle>
-              <RankingChange>{item.change}</RankingChange>
-              <RankingArtist>{item.artist}</RankingArtist>
-            </RankingInfo>
-          </RankingProps>
-        ))}
+        {rankingsData &&
+          selectedCategoryId &&
+          rankingsData[selectedCategoryId]
+            .slice(0, visibleItems)
+            .map((item) => (
+              <RankingProps key={item.id}>
+                <RankingImgContainer>
+                  <RankingImg src={item.imageSrc} alt="앨범표지"></RankingImg>
+                </RankingImgContainer>
+                <RankingInfo>
+                  <RankingNum>{item.num}</RankingNum>
+                  <RankingTitle>{item.title}</RankingTitle>
+                  <RankingChange>{item.change}</RankingChange>
+                  <RankingArtist>{item.artist}</RankingArtist>
+                </RankingInfo>
+              </RankingProps>
+            ))}
       </RankingList>
     </RankingsContainer>
   );

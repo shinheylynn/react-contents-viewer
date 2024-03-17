@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
-import bannersData from '../data/bannersData.json';
 import { flexCenter, overflowEllipsis } from '../utils/mixin';
+import bannersData from '../data/bannersData.json';
 
 const BannerContainer = styled.div`
   padding: 15px 20px 0px 20px;
@@ -56,7 +56,7 @@ const Arrow = styled.div`
   margin: 0px 5px;
 `;
 
-const Banners = () => {
+const Banners = ({ data: categoryId }) => {
   const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -83,24 +83,38 @@ const Banners = () => {
     prevArrow: <PrevArrow />,
   };
 
+  const [selectedCategoryId, setSelectedCategoryId] = useState('');
+
+  useEffect(() => {
+    if (categoryId) setSelectedCategoryId(categoryId);
+  }, [categoryId]);
+
+  console.log(categoryId);
+  console.log(selectedCategoryId);
+  console.log(bannersData[categoryId]);
+  console.log(Array.isArray(bannersData[categoryId]));
+
   return (
     <BannerContainer>
       <Slider {...settings}>
-        {bannersData.map((item) => (
-          <BannerLinkContainer key={item.id}>
-            <BannerLink
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BannerLinkProps>
-                <BannerImg src={item.imageSrc} alt="M Count Down Image" />
-                <BannerTitle>{item.title}</BannerTitle>
-                <BannerSubtitle>{item.subtitle}</BannerSubtitle>
-              </BannerLinkProps>
-            </BannerLink>
-          </BannerLinkContainer>
-        ))}
+        {bannersData &&
+          categoryId &&
+          Array.isArray(bannersData[categoryId]) &&
+          bannersData[categoryId].map((item) => (
+            <BannerLinkContainer key={item.id}>
+              <BannerLink
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BannerLinkProps>
+                  <BannerImg src={item.imageSrc} alt="M Count Down Image" />
+                  <BannerTitle>{item.title}</BannerTitle>
+                  <BannerSubtitle>{item.subtitle}</BannerSubtitle>
+                </BannerLinkProps>
+              </BannerLink>
+            </BannerLinkContainer>
+          ))}
       </Slider>
     </BannerContainer>
   );
