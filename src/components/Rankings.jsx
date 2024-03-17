@@ -9,6 +9,8 @@ import {
   invisibleScrollBar,
 } from '../utils/mixin';
 
+import rankingsData from '../data/rankingsData.json';
+
 const RankingsContainer = styled.div`
   ${flexCenter('flex-start', 'center')};
   margin: 20px;
@@ -39,6 +41,7 @@ const Chevron = styled(FontAwesomeIcon)`
 `;
 
 const RankingList = styled.div`
+  color: var(--white);
   width: 90%;
   padding: 0px 0px 10px 0px;
   overflow-y: scroll;
@@ -76,7 +79,6 @@ const RankingInfo = styled.div`
 const RankingNum = styled.div`
   ${flexCenter('center', 'flex-start')};
   font-size: 17px;
-  font-weight: 600;
 `;
 
 const RankingTitle = styled.div`
@@ -85,7 +87,6 @@ const RankingTitle = styled.div`
   font-size: 17px;
   max-width: 100%;
   min-width: 0;
-  color: black;
 `;
 
 const RankingChange = styled.div`
@@ -98,7 +99,7 @@ const RankingArtist = styled.div`
   color: var(--grey);
 `;
 
-const Rankings = ({ data }) => {
+const Rankings = ({ data: categoryId }) => {
   const itemsPerPage = 7;
   const [visibleItems, setVisibleItems] = useState(itemsPerPage);
   const rankingListRef = useRef(null);
@@ -130,15 +131,15 @@ const Rankings = ({ data }) => {
     };
   }, []);
 
-  const [rankingsData, setRankingsData] = useState([]);
+  const [selectedCategoryId, setSelectedCategoryId] = useState('');
 
   useEffect(() => {
-    if (data) {
-      setRankingsData(data);
-    }
-  }, [data]);
+    if (categoryId) setSelectedCategoryId(categoryId);
+  }, [categoryId]);
 
-  console.log(rankingsData);
+  console.log(categoryId);
+  console.log(selectedCategoryId);
+  console.log(rankingsData[selectedCategoryId]);
 
   return (
     <RankingsContainer>
@@ -148,19 +149,23 @@ const Rankings = ({ data }) => {
       </RankingsTitleConatiner>
 
       <RankingList ref={rankingListRef}>
-        {rankingsData.slice(0, visibleItems).map((item) => (
-          <RankingProps key={item.id}>
-            <RankingImgContainer>
-              <RankingImg src={item.imageSrc} alt="앨범표지"></RankingImg>
-            </RankingImgContainer>
-            <RankingInfo>
-              <RankingNum>{item.num}</RankingNum>
-              <RankingTitle>{item.title}</RankingTitle>
-              <RankingChange>{item.change}</RankingChange>
-              <RankingArtist>{item.artist}</RankingArtist>
-            </RankingInfo>
-          </RankingProps>
-        ))}
+        {rankingsData &&
+          selectedCategoryId &&
+          rankingsData[selectedCategoryId]
+            .slice(0, visibleItems)
+            .map((item) => (
+              <RankingProps key={item.id}>
+                <RankingImgContainer>
+                  <RankingImg src={item.imageSrc} alt="앨범표지"></RankingImg>
+                </RankingImgContainer>
+                <RankingInfo>
+                  <RankingNum>{item.num}</RankingNum>
+                  <RankingTitle>{item.title}</RankingTitle>
+                  <RankingChange>{item.change}</RankingChange>
+                  <RankingArtist>{item.artist}</RankingArtist>
+                </RankingInfo>
+              </RankingProps>
+            ))}
       </RankingList>
     </RankingsContainer>
   );

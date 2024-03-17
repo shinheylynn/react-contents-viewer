@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import { flexCenter, overflowEllipsis } from '../utils/mixin';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import bannersData from '../data/bannersData.json';
 
 const BannerContainer = styled.div`
   padding: 15px 20px 0px 20px;
@@ -57,7 +56,7 @@ const Arrow = styled.div`
   margin: 0px 5px;
 `;
 
-const Banners = ({ data }) => {
+const Banners = ({ data: categoryId }) => {
   const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -84,34 +83,38 @@ const Banners = ({ data }) => {
     prevArrow: <PrevArrow />,
   };
 
-  const [bannersData, setBannersData] = useState([]);
+  const [selectedCategoryId, setSelectedCategoryId] = useState('');
 
   useEffect(() => {
-    if (data) {
-      setBannersData(data);
-    }
-  }, [data]);
+    if (categoryId) setSelectedCategoryId(categoryId);
+  }, [categoryId]);
 
-  console.log(bannersData);
+  console.log(categoryId);
+  console.log(selectedCategoryId);
+  console.log(bannersData[categoryId]);
+  console.log(Array.isArray(bannersData[categoryId]));
 
   return (
     <BannerContainer>
       <Slider {...settings}>
-        {bannersData.map((item) => (
-          <BannerLinkContainer key={item.id}>
-            <BannerLink
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BannerLinkProps>
-                <BannerImg src={item.imageSrc} alt="M Count Down Image" />
-                <BannerTitle>{item.title}</BannerTitle>
-                <BannerSubtitle>{item.subtitle}</BannerSubtitle>
-              </BannerLinkProps>
-            </BannerLink>
-          </BannerLinkContainer>
-        ))}
+        {bannersData &&
+          categoryId &&
+          Array.isArray(bannersData[categoryId]) &&
+          bannersData[categoryId].map((item) => (
+            <BannerLinkContainer key={item.id}>
+              <BannerLink
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BannerLinkProps>
+                  <BannerImg src={item.imageSrc} alt="M Count Down Image" />
+                  <BannerTitle>{item.title}</BannerTitle>
+                  <BannerSubtitle>{item.subtitle}</BannerSubtitle>
+                </BannerLinkProps>
+              </BannerLink>
+            </BannerLinkContainer>
+          ))}
       </Slider>
     </BannerContainer>
   );
