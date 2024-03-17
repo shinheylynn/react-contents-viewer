@@ -25,7 +25,7 @@ const Category = styled.button`
 `;
 
 function Categories() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('차트');
 
   return (
     <CategoryContainer>
